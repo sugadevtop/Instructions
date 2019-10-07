@@ -47,8 +47,8 @@ extension CoachMarksController: CoachMarksControllerProxyDataSource {
 }
 
 extension CoachMarksController: CoachMarksControllerProxyDelegate {
-    func didTapPassThrowView(coachMark: CoachMark?) {
-        delegate?.coachMarksController(self, didTapPassThrowView: coachMark)
+    func didTapPassThrowView(coachMark: CoachMark?, at index: Int) {
+        delegate?.coachMarksController(self, didTapPassThrowView: coachMark, at: index)
     }
     
     func configureOrnaments(ofOverlay overlay: UIView) {

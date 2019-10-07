@@ -56,7 +56,7 @@ public protocol CoachMarksControllerDelegate: class {
     
     
     func coachMarksController(_ coachMarksController: CoachMarksController,
-                              didTapPassThrowView coachMark: CoachMark?)
+                              didTapPassThrowView coachMark: CoachMark?, at index: Int)
 }
 
 public extension CoachMarksControllerDelegate {
@@ -127,5 +127,5 @@ protocol CoachMarksControllerProxyDelegate: class {
 
     func shouldHandleOverlayTap(at index: Int) -> Bool
     
-    func didTapPassThrowView(coachMark: CoachMark?)
+    func didTapPassThrowView(coachMark: CoachMark?, at index: Int)
 }

@@ -123,7 +123,7 @@ CoachMarksControllerDelegate {
         return true
     }
     
-    func coachMarksController(_ coachMarksController: CoachMarksController, didTapPassThrowView coachMark: CoachMark?) {
-        snapshotDelegate?.coachMarksController(coachMarksController, didTapPassThrowView: coachMark)
+    func coachMarksController(_ coachMarksController: CoachMarksController, didTapPassThrowView coachMark: CoachMark?, at index: Int) {
+        snapshotDelegate?.coachMarksController(coachMarksController, didTapPassThrowView: coachMark, at: index)
     }
 }
