@@ -79,7 +79,7 @@ internal class CustomCoachMarkBodyView : UIView, CoachMarkBodyView {
         self.nextButton.translatesAutoresizingMaskIntoConstraints = false
         self.hintLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        self.nextButton.isUserInteractionEnabled = true
+        self.nextButton.isUserInteractionEnabled = false
         self.hintLabel.isUserInteractionEnabled = false
 
         self.nextButton.setBackgroundImage(UIImage(named: "button-background"),

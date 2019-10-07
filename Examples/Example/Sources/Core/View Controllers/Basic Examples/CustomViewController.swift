@@ -49,6 +49,7 @@ internal class CustomViewsViewController: ProfileViewController {
     }
 }
 
+
 // MARK: - Protocol Conformance | CoachMarksControllerDataSource
 extension CustomViewsViewController: CoachMarksControllerDataSource {
     // MARK: - Protocol Conformance | CoachMarksControllerDataSource
@@ -72,6 +73,8 @@ extension CustomViewsViewController: CoachMarksControllerDataSource {
                 // This will create a circular cutoutPath, perfect for the circular avatar!
                 return UIBezierPath(ovalIn: frame.insetBy(dx: -4, dy: -4))
             }
+            coachMark.disableOverlayTap = false
+            coachMark.allowTouchInsideCutoutPath = true
         case 1:
             coachMark = coachMarksController.helper.makeCoachMark(for: self.handleLabel)
             coachMark.arrowOrientation = .top

@@ -25,7 +25,8 @@ import Instructions
 
 /// This class serves as a base for all the other examples
 internal class ProfileViewController: UIViewController,
-                                      CoachMarksControllerDelegate {
+CoachMarksControllerDelegate {
+    
     // MARK: - IBOutlet
     @IBOutlet weak var handleLabel: UILabel?
     @IBOutlet weak var emailLabel: UILabel?
@@ -120,5 +121,9 @@ internal class ProfileViewController: UIViewController,
     func shouldHandleOverlayTap(in coachMarksController: CoachMarksController,
                                 at index: Int) -> Bool {
         return true
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, didTapPassThrowView coachMark: CoachMark?) {
+        snapshotDelegate?.coachMarksController(coachMarksController, didTapPassThrowView: coachMark)
     }
 }

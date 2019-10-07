@@ -22,6 +22,10 @@
 
 import UIKit
 
+internal protocol PassthroughViewDelegate {
+    func onPassthoughViewClicked()
+}
+
 class InstructionsWindow: UIWindow {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,10 +49,12 @@ class InstructionsWindow: UIWindow {
 }
 
 class PassthroughView: UIView {
+    var delegate: PassthroughViewDelegate?
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let hitView = super.hitTest(point, with: event)
 
         if hitView == self {
+            delegate?.onPassthoughViewClicked()
             return nil
         }
 

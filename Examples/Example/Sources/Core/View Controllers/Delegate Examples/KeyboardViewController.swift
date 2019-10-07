@@ -138,6 +138,10 @@ extension KeyboardViewController: CoachMarksControllerDataSource {
 
 // MARK: - Protocol Conformance | CoachMarksControllerDelegate
 extension KeyboardViewController: CoachMarksControllerDelegate {
+    func coachMarksController(_ coachMarksController: CoachMarksController, didTapPassThrowView coachMark: CoachMark?) {
+        
+    }
+    
     func coachMarksController(_ coachMarksController: CoachMarksController,
                               willShow coachMark: inout CoachMark,
                               beforeChanging change: ConfigurationChange,

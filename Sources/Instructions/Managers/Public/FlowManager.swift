@@ -321,6 +321,10 @@ public class FlowManager {
 }
 
 extension FlowManager: CoachMarksViewControllerDelegate {
+    func didTapPassThrowView(coachMarkView: CoachMarkView?) {
+        delegate?.didTapPassThrowView(coachMark: currentCoachMark)
+    }
+    
     func didTap(coachMarkView: CoachMarkView?) {
         showNextCoachMark()
     }
